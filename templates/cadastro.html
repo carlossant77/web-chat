@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/styles/EstiloCadastro.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>LChat</h1>
+        </div>
+
+        <div>
+            <img src="/static/assets/image-Photoroom (3) 1.png" alt="">
+        </div>
+    </header>
+    
+    <form action="/cadastro" class="conteudo" method="post">
+        <input type="text" name="nome" placeholder="Nome de Usuário" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <input type="password" name="senha1" placeholder="Confirme a Senha" required>
+
+        <button type="submit">Cadastre-Se</button>
+
+        <div class="faca_login">
+            <p>Já possuí uma conta?</p> <a href="/login">Fazer Login</a>
+        </div>
+    </form>
+</body>
+</html>

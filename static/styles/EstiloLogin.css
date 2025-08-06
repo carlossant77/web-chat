@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #0A1A2B;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat';
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    color: #ffff;
+    height: 30%;
+    font-size: 40px;
+}
+
+.conteudo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px auto;   
+    border: 2px solid #273D4F;
+    background-color: #273D4F;
+    padding: 30px 25px 25px 25px;
+    border-radius: 50px;
+    width: 100%;
+    width: 450px;
+    gap: 20px;
+}
+
+input{
+    margin: 0px auto;
+    width: 75%;
+    padding: 15px;
+    border: 1px solid #3F5A72;
+    border-radius: 100px;
+    background-color: #3F5A72;
+    color: white;
+    font-size: 15px;
+}
+
+.conteudo input::placeholder{
+    color: #ffff;
+    font-size: 20px;
+}
+
+button{
+    margin: 0px auto;
+    border: 1px solid  #006BC3;
+    border-radius: 20px;
+    padding: 17px;
+    font-size: 28px;
+    width: 200px;
+    color: #ffff;
+    background-color: #006BC3;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.faca_login{
+    display: flex;
+    flex-direction: row;
+    margin: 0px auto;
+    color: #ffff;
+    font-size: 17px;
+}
+
+.faca_login a{
+    color: #00D2FF;
+}
+
+@media (max-width: 768px){
+    header{
+        width: 100%;
+        padding: 50px;
+        width: 500px;
+        margin: 0px, auto;
+        margin-top: 100px;
+    }
+
+    .conteudo{
+       margin-top: 0px; 
+       margin-left: 50px;
+    }
+}

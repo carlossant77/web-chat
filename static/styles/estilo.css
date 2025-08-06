@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    color: #ffff;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #0A1A2B;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Montserrat';
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+    position: sticky;
+    top: 0;
+    padding: 8px;
+    background-color: #0A1A2B;
+}
+
+nav a{
+    gap: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+}
+
+nav a{
+    gap: 20px;
+}
+
+nav .btn_entrar{
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: #006BC3;
+    padding: 5px 30px 5px 30px;
+}
+
+.navegacao{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.login{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.titulo h1{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 30vh;
+    color: #ffff;
+    font-size: 90px;
+    padding-left: 120px;
+}
+
+.visao{
+    padding-right: 100px;
+}
+
+
+.navegacao a:hover{
+    text-decoration: underline;
+}
+
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 120px;
+    gap: 20px;
+    border: 2px solid #1E2D44;
+    border-radius: 60px;
+    background-color: #1E2D44;
+    padding: 30px;
+}
+
+.conteudo h2{
+    font-size: 40px;
+}
+
+.conteudo p{
+    font-size: 26px;
+}
+
+.tela1{
+    margin-bottom: 100px;
+}
+
+.tela2{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    background-color: #1E2D44;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.tela2 h1{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    padding: 20px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border: 2px solid #3A5A6B;
+    background-color: #3A5A6B;
+    border-radius: 40px;
+    overflow: hidden;
+    width: 80%;
+    margin-left: 130px;
+}
+
+.faq-item input {
+    display: none;
+}
+
+.faq-item label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 35px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    padding-left: 50px;
+}
+
+.faq-item label:hover {
+    background-color: #1C2532;
+}
+
+.faq-item .content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px ;
+    font-size: 24px;
+    background-color: #0A1A2B;
+    color: #ddd;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    font-family: 'Montserrat';
+}
+
+.faq-item input:checked ~ .content {
+    max-height: 100px; 
+    padding: 20px;
+    padding-bottom: 35px;
+}
+
+.faq-item label::after{
+    content: "+";
+    font-size: 40px;
+}
+
+.faq-item input:checked + label::after {
+    content: "-";
+}
+
+footer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+footer a {
+    color:  #006BC3;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px){
+    .titulo h1{
+        width: 100%;
+        margin-left: 200px;
+        font-size: 30px;
+        height: 15vh;
+        padding-left: 35px;
+    }   
+
+    .conteudo{
+        width: 100%;
+        padding: 50px;
+        width: 500px;
+        margin: 0px, auto;
+    }
+
+    .conteudo p{
+        font-size: 35px;
+    }
+
+    .conteudo h2{
+        font-size: 50px;
+    }
+
+    .tela2{
+        width: 100vh;
+        width: 223%;
+    }
+
+    .faq-item{
+        margin-left: 80px;
+    }
+
+    footer{
+        width: 100vh;
+        padding: 10px 20px;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        margin-top: auto;
+    }
+
+
+    footer p{
+        margin-left: 100px;
+        font-size: 20px;
+    }
+
+    .faq-item input:checked ~ .content{
+        max-height: 100px; 
+        padding: 20px;
+        padding-bottom: 120px;
+    }
+
+    .faq-item .content{
+        font: 15px;
+    }
+
+    .navegacao{
+        width: 100vh;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 200vw;
+        align-items: center;
+        gap: 60px;
+    }   
+ 
+    .visao_topo{
+        margin: 0px;
+        padding: 0px;
+        padding-left: 40px;
+        width: 110px;
+    }
+}

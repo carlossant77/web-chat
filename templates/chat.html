@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/estiloChat.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js" integrity="sha512-8BHxHDLsOHx+flIrQ0DrZcea7MkHqRU5GbTHmbdzMRnAaoCIkZ97PqZcXJkKZckMMhqfoeaJE+DNUVuyoQsO3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Chat</title>
+</head>
+<body>
+
+    <div class="nav">
+        <div class="div-botao">
+            <button type="submit" class="sair-botao">Sair</button>
+        </div>
+
+        <div class="div-chat">
+            <h2>Chat</h2>
+        </div>
+    </div>
+
+    <div class="caixa_texto" id="chatBox">
+        {% for msg in mensagens %}
+            {% if msg[2].startswith(session['nome_usuario'] ~ ':') %}
+                <div class="mensagem eu">{{ msg[2] }}</div>
+            {% else %}
+                <div class="mensagem">{{ msg[2] }}</div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <form action="/chat" method="post">
+        <input type="text" name="mensagem" placeholder="Digite sua mensagem" required>
+        <button type="submit">➤</button>
+    </form>
+    
+    <script>
+    let socket = io();
+    socket.on('atualizar_lista', () => {
+        location.reload();
+    });
+
+    window.onload = function () {
+        const chatBox = document.getElementById('chatBox');
+        if (chatBox) {
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    };
+    </script>
+    <script src="/static/scripts/chat.js"></script>
+</body>
+</html>

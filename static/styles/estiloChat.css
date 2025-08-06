@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body {
+    background-color: #0A1A2B;
+    color: white;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.caixa_texto {
+    display: flex;
+    justify-self: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 47%;
+    max-height: 60%;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: top;
+    flex-direction: row;
+    width: 100%;
+    gap: 200px;
+}
+.caixa_texto::-webkit-scrollbar {
+    width: 6px;
+}
+
+.caixa_texto::-webkit-scrollbar-thumb {
+    background-color: #3F5A72;
+    border-radius: 10px;
+}
+
+.div-botao{
+    width: 50%;
+    position: absolute;
+    top: 0;
+    padding-left: 60px;
+    margin-top: 6px;
+}
+
+.div-chat{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    margin-top: 5px;
+}   
+
+.sair-botao{
+    display: flex;
+    background-color: #0A1A2B;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #ffff;
+    font-size: 26px;
+}
+
+.sair-botao :hover{
+    background-color: rgb(113, 24, 24);
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    height: 10%;
+    margin-top: 5px;
+}
+
+
+/* Estilo de cada mensagem */
+.mensagem {
+    background-color: #3F5A72;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+    line-height: 1.5;
+    align-self: flex-start; /* por padrão, começa na esquerda */
+}
+
+/* Estilo da mensagem do próprio usuário */
+.mensagem.eu {
+    background-color: #006BC3;
+    align-self: flex-end;
+    color: white;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+/* Estilo da mensagem dos outros */
+.mensagem:not(.eu) {
+    background-color: #3F5A72;
+    align-self: flex-start;
+    color: white;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+
+/* Estilo do formulário */
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input {
+    display: flex;
+    justify-self: center;
+    background-color: #273D4F;
+    padding: 15px;
+    width: 40%;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    border: 2px solid #3F5A72;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    outline: none;
+}   
+
+input::placeholder {
+    color: #a0a0a0; /* Cor mais suave para o placeholder */
+}
+
+input:focus {
+    border-color: #006BC3; /* Foca na borda do input ao ser selecionado */
+}
+
+button {
+    background-color: #006BC3;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 25px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #005B9A;
+}
+
+@media (max-width: 768px){
+    .caixa_texto{
+        width: 100vw;
+    }
+
+    input{
+        width: 70vw;
+    }
+}
