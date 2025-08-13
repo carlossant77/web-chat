@@ -8,6 +8,10 @@ Este repositório contém uma aplicação web de um chat de conversas por texto 
 ![foto1](static/assets/chat1.png)
 
 # Tecnologias Utilizadas
-HTML, CSS, Python/SocketIO
+- **HTML:** Estruturação do Web Chat
+- **CSS:** Estilização do Web CHat
+- **Python:** Linguagem utilizada para construção da aplicação, incialização do servidor e navegação por rotas
+- **SocketIO:** Microframework utilizado para as interações entre os computadores em tempo real
 
-Link da Aplicação: https://web-chat-santiago.onrender.com
+# Demostração da Aplicação
+A aplicação pode ser testada através: [Deste Link](https://web-chat-santiago.onrender.com)
