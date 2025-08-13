@@ -4,8 +4,8 @@ Este repositório contém uma aplicação web de um chat de conversas por texto 
 
 # Demonstração Visual
 ![inicio](static/assets/inicio.png)
-![login1](static/assets/login.png)
-![foto1](static/assets/chat.png)
+![login1](static/assets/login1.png)
+![foto1](static/assets/chat1.png)
 
 # Tecnologias Utilizadas
 HTML, CSS, Python/SocketIO
